@@ -1,0 +1,30 @@
+{
+  "methods": {
+    "bank": {
+      "name": "Shree Shiddhi Vinayaka Swamy Temple",
+      "number": "12345678901",
+      "ifsc": "SBIN000000",
+      "branch": "Kunavaram"
+    },
+    "upi": "VINAYAKA@upi",
+    "onsite": "Donation counter near the temple entrance."
+  },
+  "recent": [
+    { "donor": "Sri. Ramana", "amount": 5000 },
+    { "donor": "Smt. Lakshmi", "amount": 2000 },
+    { "donor": "Sri. Ramesh", "amount": 1000 },
+    { "donor": "Smt. Sita", "amount": 500 },
+    { "donor": "Sri. Ramesh", "amount": 1000 },
+    { "donor": "Smt. Sita", "amount": 500 },
+    { "donor": "Sri. Ramesh", "amount": 1000 },
+    { "donor": "Smt. Sita", "amount": 500 },
+    { "donor": "Sri. Ramesh", "amount": 1000 },
+    { "donor": "Smt. Sita", "amount": 500 },
+    { "donor": "Sri. Ramesh", "amount": 1000 },
+    { "donor": "Smt. Sita", "amount": 500 },
+    { "donor": "Sri. Ramesh", "amount": 1000 },
+    { "donor": "Smt. Sita", "amount": 500 },
+    { "donor": "Sri. Ramesh", "amount": 1000 },
+    { "donor": "Smt. Sita", "amount": 500 }
+  ]
+}

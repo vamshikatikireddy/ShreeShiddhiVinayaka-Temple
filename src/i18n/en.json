@@ -1,0 +1,80 @@
+{
+  "brand": "Shree Shiddhi Vinayaka Swamy Temple",
+  "location": "Rudravari Merakha, Patha Kunavaram junction, Chintalapalli, Razole, Andhra Pradesh",
+  "nav": {
+    "home": "Home",
+    "chavithi": "Vinayaka Chavithi",
+    "performances": "Stage Performances",
+    "donations": "Donations",
+    "gallery": "Gallery",
+    "updates": "Updates",
+    "about": "About Vinayaka",
+    "committee": "Committee",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Welcome to the divine abode of Lord Vinayaka",
+    "location": "Rudravari Merakha, Patha Kunavaram junction, Chintalapalli, Razole, Andhra Pradesh",
+    "desc": "Explore celebrations, day-wise events, seva details of the temple."
+  },
+  "about": {
+    "title": "About Sri Vinayaka",
+    "lead": "Key aspects of Lord Ganesha (Vinayaka) presented as cards.",
+    "learnMore": "Learn More"
+  },
+  "chavithi": {
+    "title": "Vinayaka Chavithi Celebrations",
+    "lead": "Festival schedule, pooja timings, and key rituals.",
+    "date": "Festival Date",
+    "venue": "Venue",
+    "timings": "Timings",
+    "rituals": "Key Rituals"
+  },
+  "performances": {
+    "title": "Stage Performances (Day-wise)",
+    "lead": "Cultural programs and bhajans scheduled across days.",
+    "day": "Day",
+    "time": "Time",
+    "program": "Program",
+    "group": "Group"
+  },
+  "donations": {
+    "title": "Donations",
+    "lead": "Support the temple and community services.",
+    "how": "How to Donate",
+    "bank": "Bank Transfer",
+    "onsite": "On-site Donation",
+    "upi": "UPI",
+    "name": "Account Name",
+    "number": "Account Number",
+    "ifsc": "IFSC",
+    "note": "All donations are used for temple maintenance, poojas, and community welfare."
+  },
+  "updates": {
+    "title": "Upcoming Updates",
+    "lead": "Announcements and schedules."
+  },
+  "committee": {
+    "title": "Temple Committee",
+    "lead": "Contact the committee for temple services and event coordination."
+  },
+  "contact": {
+    "title": "Contact",
+    "lead": "Reach the temple for inquiries, seva bookings, and feedback.",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address"
+  },
+  "map": {
+    "title": "Map",
+    "lead": "View the temple location on a map."
+  },
+  "gallery": {
+    "title": "Gallery",
+    "lead": "View photos and videos of the temple."
+  },
+  "lang": {
+    "english": "English",
+    "telugu": "తెలుగు"
+  }
+}

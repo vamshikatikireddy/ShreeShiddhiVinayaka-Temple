@@ -1,0 +1,12 @@
+{
+  "name": "Shree Shiddhi Vinayaka Swamy Temple",
+  "short_name": "Vinayaka Temple",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#c0392b",
+  "icons": [
+    { "src": "/icons/icons1.jpeg", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
