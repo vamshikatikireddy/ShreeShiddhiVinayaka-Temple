@@ -1,5 +1,13 @@
 [
-  { "name": "Sri Ramesh Babu", "role": "President", "phone": "+91 9xxxxxxxxx" },
-  { "name": "Sri Srinivas", "role": "Secretary", "phone": "+91 9xxxxxxxxx" },
-  { "name": "Smt. Sita Devi", "role": "Treasurer", "phone": "+91 9xxxxxxxxx" }
+  { "name": "Intipalli Bujji", "role": "President", "phone": "+91 9849242009" },
+  {
+    "name": "Vegirouthu Srihari",
+    "role": "Secretary",
+    "phone": "+91 9949679528"
+  },
+  {
+    "name": "Intipalli Sathish",
+    "role": "Treasurer",
+    "phone": "+91 9912562828"
+  }
 ]
