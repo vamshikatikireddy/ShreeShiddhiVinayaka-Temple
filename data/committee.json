@@ -1,13 +1,16 @@
 [
-  { "name": "Intipalli Bujji", "role": "President", "phone": "+91 9849242009" },
+  { "name": "Intipalli Bujji", "phone": "+91 9849242009" },
+  { "name": "Medicharla Baskar Rao", "phone": "+91 7893713897" },
   {
     "name": "Vegirouthu Srihari",
-    "role": "Secretary",
     "phone": "+91 9949679528"
   },
   {
     "name": "Intipalli Sathish",
-    "role": "Treasurer",
     "phone": "+91 9912562828"
+  },
+  {
+    "name": "Intipalli Satya Prasad",
+    "phone": "+91 9951539619"
   }
 ]
