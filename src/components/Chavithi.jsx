@@ -15,32 +15,79 @@ export default function Chavithi() {
     >
       <div className="card">
         <div className="kv">
-          <span>{t("chavithi.date")}</span>
-          <strong>{date}</strong>
+          <strong style={{ width: "40%" }}>{t("chavithi.date")}</strong>
+          <strong style={{ width: "70%" }}>{date}</strong>
         </div>
         <div className="kv">
-          <span>{t("chavithi.venue")}</span>
-          <strong>{chavithiInfo.venue}</strong>
+          <strong style={{ width: "40%" }}>{t("chavithi.venue")}</strong>
+          <strong style={{ width: "70%" }}>
+            {t("chavithi.venue_content")}
+          </strong>
         </div>
         <div style={{ marginTop: 14 }}>
-          <div className="badge">{t("chavithi.timings")}</div>
-          <div className="list" style={{ marginTop: 8 }}>
+          <strong className="badge">{t("chavithi.timings")}</strong>
+          <div className="List" style={{ marginTop: 8 }}>
             {chavithiInfo.timings.map((tmg, idx) => (
-              <div className="kv" key={idx}>
-                <span>{tmg.label}</span>
-                <span>{tmg.time}</span>
-              </div>
+              <strong
+                className="kv"
+                style={{
+                  display: "grid",
+
+                  width: "100%",
+                }}
+                key={idx}
+              >
+                <div>
+                  <span>{tmg.label}</span>
+                  <span>{tmg.lead}</span>
+                </div>
+              </strong>
             ))}
           </div>
         </div>
+      </div>
+      <strong>Ekaham</strong>
+      <div className="card">
+        <div className="kv">
+          <strong style={{ width: "40%" }}>{t("chavithi.date")}</strong>
+          <strong style={{ width: "70%" }}>{chavithiInfo.Ekaham_date}</strong>
+        </div>
+        <div className="kv">
+          <strong style={{ width: "40%" }}>{t("chavithi.venue")}</strong>
+          <strong style={{ width: "70%" }}>
+            {t("chavithi.venue_content")}
+          </strong>
+        </div>
         <div style={{ marginTop: 14 }}>
+          <strong className="badge">{t("chavithi.timings")}</strong>
+          <div className="List" style={{ marginTop: 8 }}>
+            {chavithiInfo.Ekaham.map((tmg, idx) => (
+              <strong
+                className="kv"
+                style={{
+                  display: "grid",
+
+                  width: "100%",
+                }}
+                key={idx}
+              >
+                <div>
+                  <span>{tmg.Ekaham_label}</span>
+                  <span>{tmg.Ekaham_lead}</span>
+                </div>
+              </strong>
+            ))}
+          </div>
+        </div>
+
+        {/* <div style={{ marginTop: 14 }}>
           <div className="badge">{t("chavithi.rituals")}</div>
           <ul>
             {chavithiInfo.rituals.map((r, idx) => (
               <li key={idx}>{r}</li>
             ))}
           </ul>
-        </div>
+        </div> */}
       </div>
     </Section>
   );

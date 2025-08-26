@@ -16,6 +16,7 @@
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+  -webkit-filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
 @keyframes logo-spin {
@@ -39,4 +40,65 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.perf-days-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.perf-day-card {
+  padding: 12px;
+}
+
+.perf-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+}
+
+.perf-tile {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.perf-thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: #f2f2f2;
+}
+
+.perf-thumb img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.perf-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px;
+}
+
+.perf-line {
+  font-size: 14px;
+  color: var(--text);
+}
+
+@media (min-width: 1200px) {
+  .perf-days-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  .perf-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
 }

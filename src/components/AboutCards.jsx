@@ -14,7 +14,12 @@ export default function AboutCards() {
             <img src={c.img} alt="" style={{ width: 100, height: 100 }} />
             <h3 style={{ margin: "8px 0" }}>{isTe ? c.teTitle : c.title}</h3>
             <p className="meta">{isTe ? c.teDesc : c.desc}</p>
-            <a href="#chavithi" className="btn" style={{ marginTop: 10 }}>
+            <a
+              href={c.link}
+              target="_blank"
+              className="btn"
+              style={{ marginTop: 10 }}
+            >
               {t("about.learnMore")}
             </a>
           </div>

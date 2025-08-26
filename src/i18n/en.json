@@ -4,7 +4,7 @@
   "nav": {
     "home": "Home",
     "chavithi": "Vinayaka Chavithi",
-    "performances": "Stage Performances",
+    "performances": "Events",
     "donations": "Donations",
     "gallery": "Gallery",
     "updates": "Updates",
@@ -15,7 +15,7 @@
   "hero": {
     "title": "Welcome to the divine abode of Lord Vinayaka",
     "location": "Rudravari Merakha, Patha Kunavaram junction, Chintalapalli, Razole, Andhra Pradesh",
-    "desc": "Explore celebrations, day-wise events, seva details of the temple."
+    "desc": "Shree Siddi Vinayaka Temple, established in 1980, is a  place of devotion located at Rudravari Meraka Patha, Kunavaram Junction. Dedicated to Lord Ganesha, the temple has been a center of faith and spirituality for devotees, fostering peace, devotion, and cultural traditions in the community."
   },
   "about": {
     "title": "About Sri Vinayaka",
@@ -25,10 +25,13 @@
   "chavithi": {
     "title": "Vinayaka Chavithi Celebrations",
     "lead": "Festival schedule, pooja timings, and key rituals.",
-    "date": "Festival Date",
-    "venue": "Venue",
-    "timings": "Timings",
-    "rituals": "Key Rituals"
+    "date": "Festival Date :",
+    "venue": "Venue : ",
+    "timings": "Timings :",
+    "rituals": "Key Rituals :",
+    "venue_content": "Shree Shiddhi Vinayaka Swamy Temple, Rudravari Merakha",
+    "pooja_label": "Sankalpam & Prathama Pooja - 09:15 AM",
+    "pooja_lead": "The puja programs will be performed by the couple Intipalli Nookaraju and Sri Mati Gangabhavani."
   },
   "performances": {
     "title": "Stage Performances (Day-wise)",
@@ -71,6 +74,14 @@
   },
   "gallery": {
     "title": "Gallery",
+    "lead": "View photos and videos of the temple."
+  },
+  "AnnaSamaradhana": {
+    "title": "Annasamaradhana",
+    "lead": "View photos and videos of the temple."
+  },
+  "Laddu": {
+    "title": "Laddu Pata",
     "lead": "View photos and videos of the temple."
   },
   "lang": {
