@@ -2,16 +2,19 @@ export const chavithiInfo = {
   date: "2025-08-27", // Update to the exact Chavithi date
   venue: "Shree Shiddhi Vinayaka Swamy Temple, Rudravari Merakha",
   timings: [
-    { label: "Sankalpam & Prathama Pooja", time: "07:00 AM" },
-    { label: "Ganapati Homam", time: "08:30 AM" },
-    { label: "Special Alankaram", time: "11:00 AM" },
-    { label: "Maha Harathi", time: "12:30 PM" },
-    { label: "Evening Harathi", time: "07:30 PM" },
+    { label: "Sankalpam & Prathama Pooja - 09:15 AM" },
+    {
+      lead: "The puja programs will be performed by the couple Intipalli Nookaraju and Sri Mati Gangabhavani.",
+    },
   ],
-  rituals: [
-    "Paalabhishekam",
-    "Modaka Nivedanam",
-    "Ganapati Atharvashirsha Parayanam",
-    "Community Bhajans",
+  Ekaham_date: "03 Sep 2025",
+  Ekaham: [
+    {
+      Ekaham_label: "Prathama Pooja - 05:15 AM",
+    },
+    {
+      Ekaham_lead:
+        "The puja programs will be performed by the couple Rudra Venkata Durga Narayana and Sri Mati Ramani.",
+    },
   ],
 };

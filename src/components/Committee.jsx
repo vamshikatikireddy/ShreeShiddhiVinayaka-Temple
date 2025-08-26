@@ -22,9 +22,12 @@ export default function Committee() {
     >
       <div className="grid">
         {members.map((m, idx) => (
-          <div className="card" key={idx}>
+          <div
+            className="kv"
+            key={idx}
+            style={{ gridTemplateColumns: "min-content 2fr", gap: 10 }}
+          >
             <h3 style={{ margin: "8px 0" }}>{m.name}</h3>
-            <p className="meta">{m.role}</p>
             <p className="meta">{m.phone}</p>
           </div>
         ))}

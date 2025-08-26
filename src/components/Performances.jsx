@@ -1,3 +1,5 @@
+// Performances.jsx — Option A: Responsive grid of day cards with square tiles
+
 import Section from "./Section";
 import { performances } from "../data/performances";
 import dayjs from "dayjs";
@@ -5,21 +7,22 @@ import { useTranslation } from "react-i18next";
 
 export default function Performances() {
   const { t } = useTranslation();
+
   return (
     <Section
       id="performances"
       title={t("performances.title")}
       lead={t("performances.lead")}
     >
-      <div className="list">
+      <div className="perf-days-grid">
         {performances.map((d, idx) => (
-          <div className="card" key={idx}>
+          <div className="card perf-day-card" key={idx} id={`day-${d.day}`}>
             <div
               style={{
                 display: "flex",
-                flexDirection: "row",
                 justifyContent: "space-between",
                 marginBottom: 8,
+                gap: 8,
               }}
             >
               <div>
@@ -27,38 +30,34 @@ export default function Performances() {
                   {t("performances.day")} {d.day}
                 </strong>
               </div>
-              <div className="meta">{dayjs(d.date).format("DD MMM YYYY")}</div>
+              <strong className="meta">
+                {dayjs(d.date).format("DD MMM YYYY")}
+              </strong>
             </div>
-            <div className="list">
+
+            <div className="perf-grid">
               {d.items.map((it, i) => (
-                <div
-                  className="kv"
-                  key={i}
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                  }}
-                >
-                  <div style={{ width: 100 }}>
-                    <img src={it.image} alt="" />
+                <div className="perf-tile" key={i}>
+                  <div className="perf-thumb">
+                    <img
+                      src={it.image}
+                      alt={`${it.program} - ${it.group}`}
+                      loading="lazy"
+                    />
                   </div>
-                  <div>
-                    <span
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                      }}
-                    >
-                      <span>
+                  <strong>
+                    <div className="perf-text">
+                      <div className="perf-line">
                         {t("performances.time")}: {it.time}
-                      </span>
-                      <span>
-                        {t("performances.program")}: {it.program} <br />
+                      </div>
+                      <div className="perf-line">
+                        {t("performances.program")}: {it.program}
+                      </div>
+                      <div className="perf-line">
                         {t("performances.group")}: {it.group}
-                      </span>
-                    </span>
-                  </div>
+                      </div>
+                    </div>
+                  </strong>
                 </div>
               ))}
             </div>
@@ -68,3 +67,15 @@ export default function Performances() {
     </Section>
   );
 }
+
+/* If your images are in public/ and you deploy on GitHub Pages, build src with BASE_URL:
+
+Replace:
+  <img src={it.image} ... />
+With:
+  const base = import.meta.env.BASE_URL;
+  <img src={`${base}${it.image}`} ... />
+
+And ensure your data uses relative paths like "images/your.jpg". If you import images from src/assets with
+import { harikatha } from "../assets";
+then keep src={it.image} as in this example. */

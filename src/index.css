@@ -16,6 +16,7 @@ html {
 }
 body {
   margin: 0;
+  padding: 10px;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans",
     "Noto Sans Telugu", sans-serif;
   background: var(--bg);
@@ -25,7 +26,7 @@ body {
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 24px;
+  padding: 16px;
 }
 
 .navbar {
@@ -40,9 +41,8 @@ body {
 .navbar-inner {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 2px;
   justify-content: space-between;
-  padding: 12px 24px;
 }
 
 .nav-links {
@@ -104,7 +104,7 @@ body {
 
 .section h2 {
   margin: 0 0 8px;
-  font-size: 26px;
+  font-size: 22px;
 }
 
 .section p.lead {
@@ -169,4 +169,343 @@ body {
   padding: 24px;
   text-align: center;
   color: var(--muted);
+}
+
+.perf-days-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  padding: 12px;
+}
+/* Performances grid: responsive, 200–240px tile min width */
+/* .perf-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+} */
+
+/* Each tile is a vertical card: square image on top, text below */
+.perf-tile {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* Square image area using aspect-ratio; image covers the square */
+.perf-thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* keeps it square */
+  background: #f2f2f2;
+}
+
+.perf-thumb img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* center-crop */
+}
+
+/* Text area grows as needed; keep padding comfortable */
+.perf-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px;
+}
+
+.perf-line {
+  font-size: 14px;
+  color: var(--text);
+}
+
+/* Optional: make tiles feel clickable if you’ll link them later */
+.perf-tile:hover {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  transform: translateY(-1px);
+  transition: box-shadow 160ms ease, transform 160ms ease;
+}
+
+/* Visibility helpers */
+.desktop-only {
+  display: none;
+}
+.mobile-only {
+  display: inline-flex;
+}
+
+@media (min-width: 900px) {
+  .desktop-only {
+    display: flex;
+  }
+  .mobile-only {
+    display: none;
+  }
+}
+
+.drawer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none; /* disabled by default */
+  z-index: 1000;
+}
+.drawer.open {
+  pointer-events: auto;
+}
+
+/* Side panel must be above backdrop and clickable */
+.drawer-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: min(80vw, 320px);
+  height: 100%;
+  background: #fff;
+  border-right: 1px solid var(--border);
+  transform: translateX(-100%);
+  transition: transform 220ms ease;
+  display: flex;
+  flex-direction: column;
+  z-index: 2; /* key: above backdrop */
+  pointer-events: auto; /* must receive clicks */
+}
+.drawer.open .drawer-panel {
+  transform: translateX(0);
+}
+
+/* Backdrop sits under panel but over the page */
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  transition: opacity 200ms ease;
+  border: none;
+  z-index: 1; /* key: below panel */
+  pointer-events: auto; /* so clicks close it */
+}
+.drawer.open .backdrop {
+  opacity: -1;
+}
+
+/* Hamburger */
+.hamburger {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-right: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.hamburger span {
+  width: 20px;
+  height: 2px;
+  background: var(--text);
+  display: block;
+  border-radius: 2px;
+}
+
+/* Drawer container + transitions */
+.drawer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1000;
+}
+.drawer.open {
+  pointer-events: auto;
+}
+
+/* Side panel */
+.drawer-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: min(80vw, 320px);
+  height: 100%;
+  background: #fff;
+  border-right: 1px solid var(--border);
+  transform: translateX(-100%);
+  transition: transform 220ms ease;
+  display: flex;
+  flex-direction: column;
+}
+.drawer.open .drawer-panel {
+  transform: translateX(0);
+}
+
+/* Backdrop */
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  transition: opacity 200ms ease;
+  border: none;
+}
+.drawer.open .backdrop {
+  opacity: 1;
+}
+
+/* Drawer header */
+.drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.brand-mini {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.close {
+  background: #eee;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+/* Drawer links */
+.drawer-links {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 8px;
+}
+.drawer-links a {
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: var(--text);
+  text-decoration: none;
+}
+.drawer-links a.active,
+.drawer-links a:hover {
+  background: var(--card);
+  color: var(--brand);
+}
+
+/* Drawer language toggle area */
+.drawer-lang {
+  margin-top: auto;
+  padding: 12px 12px 16px;
+  border-top: 1px solid var(--border);
+}
+
+/* Adjust existing navbar for mobile spacing */
+.navbar .brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lang-radio-toggle {
+  display: inline-flex;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.lang-radio-toggle button {
+  border: none;
+  background: none;
+  padding: 6px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--text);
+  transition: background 0.18s, color 0.18s;
+  outline: none;
+}
+
+.lang-radio-toggle button.selected,
+.lang-radio-toggle button:focus[aria-checked="true"] {
+  background: var(--brand);
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 0 0 2px var(--brand-accent, #f39c12);
+}
+
+.lang-radio-toggle button:focus-visible {
+  outline: 2px solid var(--brand-accent);
+  z-index: 2;
+}
+
+.lang-radio-toggle button:not(:last-child) {
+  border-right: 1px solid var(--border);
+}
+.lang-toggle-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 52px;
+  height: 28px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #eee;
+  border-radius: 20px;
+  transition: background 0.18s;
+}
+
+.toggle-switch input:checked + .slider {
+  background-color: var(--brand, #c0392b);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  left: 4px;
+  top: 4px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 0.18s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* move the knob when checked */
+.toggle-switch input:checked + .slider:before {
+  transform: translateX(24px);
+}
+/* Optional: focus outline */
+.toggle-switch input:focus + .slider {
+  box-shadow: 0 0 0 2px var(--brand-accent, #f39c12);
+}
+
+.switch-label {
+  color: var(--muted, #626262);
+  font-size: 1rem;
+  min-width: 64px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.switch-label.active {
+  color: var(--brand, #c0392b);
+  font-weight: 700;
 }
